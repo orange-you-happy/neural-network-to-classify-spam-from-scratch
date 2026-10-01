@@ -1,4 +1,4 @@
-This is a neural network that I wrote from scatch in python using numpy. It utilises forward and backward propagation to adjust neurons represented as matrices. The activation functions used here are ReLU and sigmoid. Sigmoid is used because we only have 2 results: Either it's a spam or not a spam.
+This is a neural network that I wrote from scratch in python using numpy. It utilises forward and backward propagation to adjust neurons represented as matrices. The activation functions used here are ReLU and sigmoid. Sigmoid is used because we only have 2 results: Either it's a spam or not a spam.
 Training and testing dataset: https://huggingface.co/datasets/SetFit/enron_spam
 
 Setup:
