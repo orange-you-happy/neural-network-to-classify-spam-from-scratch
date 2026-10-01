@@ -17,12 +17,6 @@ def ReLU(Z): #One of the activation functions used
     #This applies max(0,Z) for every number in the matrix
     return np.maximum(0, Z)
 
-def softmax(Z): #One of the activation functions used, splits the result into a number of probabilities (what we need)
-    #It converts every element in the matrix to e^(that element), then finds the sum of the row and divides it by the sum.
-    exp_Z = np.exp(Z - np.max(Z, axis=0, keepdims=True))
-    column_sums = np.sum(exp_Z, axis=0, keepdims=True) 
-    return exp_Z / column_sums
-
 
 def sigmoid(Z): #One of the activation functions used, turns every number in between 0 and 1.
     Z = np.clip(Z, -500, 500)        
