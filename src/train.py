@@ -2,9 +2,9 @@ import numpy as np
 from preprocess import load_data
 from model import gradient_descent, forward_prop, get_predictions, get_accuracy
 
-N_HIDDEN = 50
-ALPHA = 0.2
-ITERATIONS = 500
+N_HIDDEN = 300
+ALPHA = 1
+ITERATIONS = 1000
 
 if __name__ == "__main__":
     np.random.seed(0)

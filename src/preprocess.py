@@ -15,9 +15,11 @@ def load_file(filename):
 
 
 def load_data():
+    print("Loading data:")
     X_train, y_train = load_file("train.jsonl")
     X_test, y_test  = load_file("test.jsonl")
 
+    print("Vectorising data:")
     vectoriser = TfidfVectorizer(max_features=5000, stop_words="english")
     X_train = vectoriser.fit_transform(X_train)   
     X_test  = vectoriser.transform(X_test)        
