@@ -1,6 +1,8 @@
 import numpy as np
 from preprocess import load_data
 from model import gradient_descent, forward_prop, get_predictions, get_accuracy
+from sklearn.metrics import confusion_matrix
+
 
 N_HIDDEN = 300
 ALPHA = 1
@@ -19,3 +21,4 @@ if __name__ == "__main__":
     _, _, _, A2_test = forward_prop(W1, W2, b1, b2, X_test)
     test_predictions = get_predictions(A2_test)
     print(f"Test accuracy: {get_accuracy(test_predictions, y_test):.2f}")
+    print(confusion_matrix(y_test.ravel(), test_predictions.ravel()))
